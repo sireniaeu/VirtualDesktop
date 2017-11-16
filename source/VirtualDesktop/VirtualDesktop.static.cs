@@ -16,12 +16,12 @@ namespace WindowsDesktop
 		/// <summary>
 		/// Gets a value indicating whether the operating system is support virtual desktop.
 		/// </summary>
-		public static bool IsSupported =>
-#if DEBUG
+		public static bool IsSupported => true;
+/*#if DEBUG
 			_isSupportedInternal;
 #else
 			Environment.OSVersion.Version.Major >= 10 && _isSupportedInternal;
-#endif
+#endif*/
 
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		public static Exception InitializationException { get; }
